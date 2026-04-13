@@ -13,11 +13,12 @@ bp = Blueprint(__name__, "HomeController")
 @bp.route("/") # cria uma rota
 def index(): # função que gerencia rota
     """ Página inicial"""
-    if 'user' not in session:
+    if '_user_id' not in session:
         return redirect(url_for("auth.login"))
     
     return render_template("dashboard/index.html") # Renderiza um template
 
+<<<<<<< HEAD
 @bp.route("/dashboard") # cria uma rota
 def dashboard(): # função que gerencia rota
     """ Painel de Vendas"""
@@ -25,3 +26,13 @@ def dashboard(): # função que gerencia rota
     #     return redirect(url_for("auth.login"))
     
     return render_template("dashboard/index.html", title="Painel de Vendas") # Renderiza um template    
+=======
+
+@bp.route("/dashboard") # cria uma rota para navegador http://127.0.0.1:5000/dashboard
+def dashboard(): # função que gerencia rota deve ser única
+    """ Painel de vendas"""
+    # remova o login
+    
+    return render_template("dashboard/index.html") # Renderiza um template
+    
+>>>>>>> 3a2690b0bd79b4a4a78a4e886c0adc772130f68c
