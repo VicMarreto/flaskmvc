@@ -1,6 +1,5 @@
 {% extends 'layout.html' %}
-
-{% block page_header %}
+  {% block page_header %}
 
  <script src="../assets/js/color-modes.js"></script>
 <!-- <link href="/static/bootstrap-5.3.6/css/bootstrap.min.css" rel="stylesheet" />-->
@@ -82,8 +81,8 @@
       }
     </style>
   {% endblock %} 
-  
-    {% block content %}
+  {% block content %}
+
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="check2" viewBox="0 0 16 16">
         <path
@@ -354,7 +353,7 @@
           ></canvas>
 
           <!-- Tabela de Dados -->
-          <h2>Section title</h2>
+          <h2>Total de Vendas no Ano 2026</h2>
           {%include 'dashboard/datatable.html' %}
         </main>
       </div>
